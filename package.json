@@ -1,0 +1,12 @@
+{
+  "name": "kicker",
+  "version": "1.0.0",
+  "description": "mern app",
+  "main": "cd ./server && npm index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "author": "Nikhil",
+  "license": "ISC"
+}
