@@ -24,6 +24,10 @@ app.use("/user", userRoutes);
 //  "";
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send(`server running at ${PORT}`);
+});
+
 mongoose
   .connect(process.env.connection_url, {
     useNewUrlParser: true,
