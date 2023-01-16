@@ -17,11 +17,6 @@ app.use(cors());
 app.use("/posts", postRoutes);
 app.use("/user", userRoutes);
 
-//const dbname = "Kicker_db";
-//const connection_url =
-//  "mongodb+srv://nikhil:.eebuL5tURPiNtx@cluster0.8jqmdrx.mongodb.net/" +
-//  dbname +
-//  "";
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
