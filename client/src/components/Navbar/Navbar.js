@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Avatar, Button, Typography, Toolbar } from "@material-ui/core";
 import usestyles from "./styles";
-import Shoes_img from "../../images/Shoes_img.jpg";
+import new_logo_img from "../../images/new_logo_img.jpg";
 import { useDispatch } from "react-redux";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import decode from "jwt-decode";
@@ -37,11 +37,11 @@ const Navbar = () => {
           variant="h2"
           align="center"
         >
-          Kicker
+          Expresss
         </Typography>
         <img
           className={classes.image}
-          src={Shoes_img}
+          src={new_logo_img}
           alt="Memories"
           height="60"
         />
