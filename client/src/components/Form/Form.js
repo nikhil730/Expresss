@@ -49,7 +49,7 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper}>
         <Typography variant="h6" align="center">
-          Please sign in first.
+          Please sign in first to create your post and like others posts :)
         </Typography>
       </Paper>
     );
