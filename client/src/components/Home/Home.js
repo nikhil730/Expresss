@@ -67,7 +67,7 @@ const Home = () => {
             <Posts setCurrentId={setCurrentId} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppBar
+            {/* <AppBar
               className={classes.appBarSearch}
               position="static"
               color="inherit"
@@ -97,11 +97,11 @@ const Home = () => {
               >
                 Search
               </Button>
-            </AppBar>
+            </AppBar> */}
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            <Paper className={classes.pagination} elevation={6}>
+            {/* <Paper className={classes.pagination} elevation={6}>
               <Paginate />
-            </Paper>
+            </Paper> */}
           </Grid>
         </Grid>
       </Container>
