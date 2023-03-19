@@ -26,6 +26,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    window.dataLayer.push({ event: "Post" });
     if (currentId) {
       dispatch(
         updatePost(currentId, { ...postData, name: user?.result?.name })
