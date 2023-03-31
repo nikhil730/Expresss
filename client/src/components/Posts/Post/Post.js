@@ -25,7 +25,18 @@ const Post = ({ post, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem("profile"));
   const history = useHistory();
 
-  const openPost = () => history.push(`/posts/${post._id}`);
+  const openPost = (props) =>
+    history.push({
+      pathname: `/posts/${post._id}`,
+      state: {
+        name: props.name,
+        tags: props.tags,
+        title: props.title,
+        message: props.message,
+        image: props.image,
+        id: props.id,
+      },
+    });
   const linkk = `/posts/${post._id}`;
   const Likes = () => {
     if (post.likes.length > 0) {
@@ -56,6 +67,17 @@ const Post = ({ post, setCurrentId }) => {
   return (
     <Card className={classes.card}>
       <CardMedia
+        onClick={() =>
+          openPost({
+            name: post.name,
+            tags: post.tags,
+            title: post.title,
+            message: post.message,
+            image: post.selectedFile,
+            createdAt: post.createdAt,
+            id: post._id,
+          })
+        }
         className={classes.media}
         image={post.selectedFile}
         title={post.title}
